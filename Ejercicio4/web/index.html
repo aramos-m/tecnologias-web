@@ -5,45 +5,155 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/Style.css">
   <title>Ejercicio bootstrap 2024-2025</title>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<div class="container">
-		<div class="row" id="Encabezado">
+
+		<div class="row mb-4" id="Encabezado">
+			<header class="col">
+				<img src="img/header.jpg" class="img-fluid" alt="Imagen de encabezado">
+			</header>
+		</div>
+		
+		<div class="row mb-4" id="Menu">
 			<div class="col">
-				<img src="img/header.jpg" class="img-fluid">
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+					<a class="navbar-brand" href="#">Fútbol</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Inicio</a>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="#">Defensas</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Centrocampistas</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Delanteros</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="nav-item"><a class="nav-link" href="#">FC Barcelona</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Real Madrid</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Real Zaragoza</a></li>
+						</ul>
+					</div>
+				</nav>
 			</div>
-		  <!-- Establecer elemento "Header" -->
-		
 		</div>
 		
-		<div class="row" id="Menu">
-		
-			<!-- Establecer elemento "nav" -->
-		
-		</div>
-		
-		<div class="row" id="Contenido">
-		
-			<!-- Establecer elemento "aside" que contiene el formulario con su título -->
-		
-			<!-- Establecer elemento "section" que contiene el carrusel con su título -->
-		</div>
-		
-		<div class="row">
+		<div class="row mb-4" id="Contenido">
+			<aside class="col-md-6 col-lg-3">
+				<h3>Compra</h3>
+				<form>
+					<div class="row mb-3 my-10">
+						<div class="col">
+							<input type="text" class="form-control" placeholder="Nombre del comprador" autofocus>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col">
+							<input type="text" class="form-control" placeholder="Dirección de envío">
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col">
+							<select class="form-control">
+								<option value="" selected disabled="disabled">Seleccione un jugador</option>
+								<option value="iniesta">Iniesta</option>
+								<option value="messi">Messi</option>
+								<option value="ronaldinho">Ronaldinho</option>
+							</select>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col">
+							<input type="number" class="form-control" placeholder="Precio" readonly>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-3">
+							<input class="btn btn-primary form-control" type="button" value="-">
+						</div>
+						<div class="col-6">
+							<input type="number" class="form-control" placeholder="Máximo 5" readonly>
+						</div>
+						<div class="col-3">
+							<input class="btn btn-primary form-control" type="button" value="+">
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col">
+							<input type="number" class="form-control" placeholder="Precio total" readonly>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+								<button class="btn btn-success mx-2">Comprar</button>
+								<button class="btn btn-secondary">Limpiar</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</aside>
 
-			<!-- Establecer elemento "section" que contiene el texto de bienvenida con su título -->
-
+			<section class="col-md-6 col-lg-9">
+				<h1>Los mejores de la historia</h1>
+				<div id="carrusel" class="carousel slide" data-ride="carousel">
+					<ul class="carousel-indicators">
+						<li data-target="#carrusel" data-slide-to="0" class="active"></li>
+						<li data-target="#carrusel" data-slide-to="1"></li>
+						<li data-target="#carrusel" data-slide-to="2"></li>
+					</ul>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="./img/iniesta-0.jpg" class="img-fluid" alt="Iniesta">
+							<div class="carousel-caption">
+								<h5><a href="#"><strong>&nbsp;Iniesta&nbsp;</strong></a></h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="./img/messi-0.jpg" class="img-fluid" alt="Messi">
+							<div class="carousel-caption">
+								<h5><a href="#"><strong>&nbsp;Messi&nbsp;</strong></a></h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="./img/ronaldinho-0.jpg" class="img-fluid" alt="Ronaldinho">
+							<div class="carousel-caption">
+								<h5><a href="#"><strong>&nbsp;Ronaldinho&nbsp;</strong></a></h5>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+						<span class="sr-only">Anterior</span></a>
+					<a class="carousel-control-next" href="#carrusel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+						<span class="sr-only">Siguiente</span></a>
+				</div>
+			</section>
+		</div>
+		
+		<div class="row mb-4">
+			<section class="col">
+				<h1>Bienvenidos</h1>
+				<p>Bienvenido a la tienda online, una tienda virtual dedicada a la venta de cromos de los mejores futbolistas de la historia. Las políticas, términos y condiciones se aplican a todas las compras realizadas en nuestra tienda virtual. Al hacer una compra, usted acepta estas políticas, términos y condiciones. Si no está de acuerdo con alguna de ellas, no podrá realizar una compra en nuestra tienda. Nos reservamos el derecho de actualizar, modificar o cambiar estas políticas, términos y condiciones en cualquier momento y sin previo aviso. Es responsabilidad del usuario revisar periódicamente estos términos y condiciones para estar al tanto de cualquier cambio. Si el usuario no está satisfecho con su compra, puede devolver el producto en un plazo de cinco días a partir de la fecha de entrega. El producto debe estar en las mismas condiciones en que fue recibido, sin usar y en su embalaje original. El usuario es responsable de los costos de envío de la devolución. Una vez que hayamos recibido el producto, proporcionaremos un reembolso completo en un plazo de cinco días. No se aceptarán devoluciones de productos personalizados o productos que hayan sido usados.</p>
+			</section>
 		</div>
 		
 		<div class="row" id="Pie">
-		  
-		  <!-- Establecer elemento "footer" -->
-		  
+			<footer class="col bg-dark">
+				<p class="text-center text-muted"><small>Los mejores futbolistas de la historia - <a class="Pie" href="#">Política de protección de datos</a></small></p>
+			</footer>
 		</div>
     </div>
 </body>
 </html>
-
